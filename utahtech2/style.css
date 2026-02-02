@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-=======
 /* Global styles */
->>>>>>> 274bd855dfecf645b57c507dedef7cdf22791c53
 body {
   background-color: #FFFFFF;
   color: #666666;
   font-family: Verdana, Arial, sans-serif;
 }
 
-<<<<<<< HEAD
-=======
 /* Header */
->>>>>>> 274bd855dfecf645b57c507dedef7cdf22791c53
 header {
   background-color: #003058;
   color: #FFFFFF;
@@ -23,13 +17,6 @@ header h1 {
   padding: .5rem;
 }
 
-<<<<<<< HEAD
-nav {
-  font-weight: bold;
-  background-color: #F3F3F3;
-}
-
-=======
 /* Navigation */
 nav {
   font-weight: bold;
@@ -38,46 +25,28 @@ nav {
 }
 
 /* h2 styling */
->>>>>>> 274bd855dfecf645b57c507dedef7cdf22791c53
 h2 {
   color: #424242;
   font-family: Georgia, serif;
 }
 
-<<<<<<< HEAD
-=======
 /* dt styling (used on students page) */
->>>>>>> 274bd855dfecf645b57c507dedef7cdf22791c53
 dt {
   color: #003058;
   font-weight: bold;
 }
 
-<<<<<<< HEAD
-=======
 /* “Ut” class */
->>>>>>> 274bd855dfecf645b57c507dedef7cdf22791c53
 .ut {
   color: #BA1C21;
   font-weight: bold;
 }
 
-<<<<<<< HEAD
-=======
 /* Footer */
->>>>>>> 274bd855dfecf645b57c507dedef7cdf22791c53
 footer {
   font-size: .70rem;
   font-style: italic;
   text-align: center;
-<<<<<<< HEAD
-}
-
-#wrapper {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-=======
   margin-top: 1rem;
 }
 
@@ -86,5 +55,4 @@ footer {
   width: 80%;
   margin-right: auto;
   margin-left: auto;
->>>>>>> 274bd855dfecf645b57c507dedef7cdf22791c53
 }
