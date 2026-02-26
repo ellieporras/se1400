@@ -5,7 +5,7 @@
 }
 nav {
     background-color: purple;
-    height: 120px;
+    height: 115px;
     grid-row: 1 / 2;
     grid-column: 1 / -1;
 }
@@ -17,13 +17,13 @@ header {
 }
 #hero {
     background-color: yellow;
-    height:350px;
+    height:230px;
     grid-row: 3 / 4;
     grid-column: 1 / -1;
 }
 main{
     background-color: skyblue;
-    height: 355px;
+    height: 235px;
     margin-left: 9px;
     margin-right: 9px;
     grid-row: 4 / 5;
