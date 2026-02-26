@@ -17,13 +17,13 @@ header {
 }
 #hero {
     background-color: yellow;
-    height:700px;
+    height:550px;
     grid-row: 3 / 4;
     grid-column: 1 / -1;
 }
 main{
     background-color: skyblue;
-    height: 850px;
+    height: 555px;
     margin-left: 9px;
     margin-right: 9px;
     grid-row: 4 / 5;
