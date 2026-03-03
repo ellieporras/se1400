@@ -1,0 +1,40 @@
+#wrapper {
+    display:grid;
+    grid-auto-rows: minmax(0, auto);
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+}
+nav {
+    background-color: purple;
+    height: 120px;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+}
+header {
+    background-color :lightgreen;
+    height:85px;
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+}
+#hero {
+    background-color: yellow;
+    height:500px;
+    grid-row: 3 / 4;
+    grid-column: 1 / -1;
+}
+main{
+    background-color: skyblue;
+    height: 580px;
+    margin-left: 9px;
+    margin-right: 9px;
+    grid-row: 4 / 5;
+    grid-column: 1 / -1;
+}
+footer {
+    background-color: red;
+    height:75px;
+    grid-row: 5 / 6;
+    grid-column: 1 / -1;
+    
+}
+
+
