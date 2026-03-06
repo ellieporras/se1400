@@ -1,129 +1,211 @@
-/* General Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #d2b4b4; /* Match the background color from mockup */
-    font-family: 'Arial Narrow', sans-serif; /* Use a condensed font to match */
+  margin: 0;
+  font-family: 'Arial Black', Arial, sans-serif;
+  background-color: #d6b1b8;
+  color: #6a0f18;
 }
 
-/* REQUIRED GRID STRUCTURE */
-.grid-wrapper {
-    display: grid;
-    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
-    width: 100%;
+#wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) repeat(6, minmax(0, 175px)) minmax(0, 1fr);
+  gap: 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
-/* Header Logic */
-.main-header {
-    grid-column: 2 / 8;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
+/* Header */
+header {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  padding: 0 15px;
+  background-color: #d6b1b8;
+  position: relative;
 }
 
-.nav-left, .nav-right {
-    display: flex;
-    gap: 15px;
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 15px;
 }
 
-.nav-left a, .nav-right a {
-    background-color: #7a1a24; /* Maroon color from mockup */
-    color: white;
-    padding: 8px 20px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
+.nav-left {
+  justify-content: flex-start;
 }
 
-.logo-area img {
-    height: 80px;
+.nav-right {
+  justify-content: flex-end;
 }
 
-/* Fit Checker Title */
-.fit-checker {
-    grid-column: 2 / 8;
-    text-align: center;
-    color: #7a1a24;
-    padding: 10px 0;
+header nav button {
+  background-color: #6a0f18;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 8px 25px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+  font-family: 'Arial Black', Arial, sans-serif;
+  transition: background-color 0.3s ease;
 }
 
-/* Hero Section */
-.hero-section {
-    grid-column: 2 / 8;
-    height: 400px;
-    background-image: url('hero-bg.jpg'); /* Your composite image */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #000;
+header nav button:hover {
+  background-color: #7d1520;
 }
 
-.style-box {
-    background-color: white;
-    padding: 20px 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+.logo {
+  justify-self: center;
 }
 
-.style-box h2 {
-    color: #7a1a24;
-    font-size: 3rem;
-    margin: 0;
+.logo img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
 }
 
-/* Product Section Logic */
-.product-container {
-    grid-column: 2 / 8;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 40px 0;
+/* FIT CHECKER Title */
+.title {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin: 0 0 20px;
+  color: #6a0f18;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
-.product-card {
-    background-color: #f2e4e4; /* Light card background */
-    padding: 10px;
-    text-align: center;
+/* Hero */
+#hero {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: -80px; /* pull hero images upward behind header background */
+  position: relative;
 }
 
-.card-image img {
-    width: 100%;
-    height: auto;
-    display: block;
+.left-hero img,
+.right-hero img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  display: block;
+  position: relative;
 }
 
-.card-label {
-    background-color: #7a1a24;
-    color: white;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 1.2rem;
+/* FIND YOUR STYLE overlay box */
+.hero-box {
+  grid-column: 1 / -1;
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 20px 60px;
+  border-radius: 12px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: #6a0f18;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  white-space: nowrap;
+  user-select: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: 'Arial Black', Arial, sans-serif;
 }
 
-/* Footer Logic */
-.main-footer {
-    grid-column: 2 / 8;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 0;
+/* Cards */
+.cards {
+  grid-column: 2 / 8;
+  display: flex;
+  gap: 22px;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: white;
+  flex: 1;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
+}
+
+.card button {
+  background-color: #6a0f18;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 30px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin: 15px 0 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  font-family: 'Arial Black', Arial, sans-serif;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.card button:hover {
+  background-color: #7d1520;
+}
+
+/* Footer */
+footer {
+  grid-column: 1 / -1;
+  background-color: #d6b1b8;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px 40px;
+  color: #6a0f18;
+  font-family: 'Arial Black', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  user-select: text;
 }
 
 .social-icons {
-    display: flex;
-    gap: 15px;
+  display: flex;
+  gap: 25px;
 }
 
 .social-icons img {
-    width: 40px;
-    height: auto;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+  filter: invert(30%) sepia(80%) saturate(500%) hue-rotate(-10deg) brightness(90%) contrast(80%);
+  transition: filter 0.3s ease;
 }
+
+.social-icons img:hover {
+  filter: invert(50%) sepia(90%) saturate(900%) hue-rotate(-15deg) brightness(110%) contrast(100%);
+}
+
 
