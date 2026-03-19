@@ -198,6 +198,12 @@ footer {
     grid-column:5 / 8;
     height:auto;
    }
+   main img{ 
+    float:none;
+    width: 100%;
+    height: auto;
+    padding-left:0px;
+   }
   }
 
   @media only screen and (max-width: 680px) {
