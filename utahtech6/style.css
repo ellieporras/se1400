@@ -192,6 +192,22 @@ input,textarea {
   background-color: #fafafa;
   border:none;
 }
+input:focus, textarea:focus {
+  outline:none;
+  background-color: #eeeeee;
+
+
+}
+
+label {
+  padding: 10px;
+  text-align: right;
+}
+#mySubmit {
+  width:10rem;
+  grid-column: 2 / 3;
+}
+
  @media only screen and (max-width: 1100px) { 
     #wrapper {
     grid-template-columns: minmax(0, 1fr) repeat(6, minmax(0, 150px)) minmax(0, 1fr);
