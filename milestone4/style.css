@@ -116,7 +116,7 @@ header nav button:hover {
   background-color: white;
   padding: 15px 40px;
   border-radius: 12px;
-  font-size: 2rem;
+  font-size: 2rem; 
   font-weight: 900;
   color: #6a0f18;
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
