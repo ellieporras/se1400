@@ -18,7 +18,7 @@ body {
   padding: 20px 0;
 }
 
-/* Header */
+
 header {
   grid-column: 1 / -1;
   display: grid;
@@ -72,7 +72,7 @@ header nav button:hover {
   object-fit: contain;
 }
 
-/* FIT CHECKER Title */
+
 .title {
   grid-column: 1 / -1;
   text-align: center;
@@ -85,7 +85,7 @@ header nav button:hover {
   text-transform: uppercase;
 }
 
-/* Hero */
+
 #hero {
   grid-column: 1 / -1;
   display: grid;
@@ -106,7 +106,7 @@ header nav button:hover {
   position: relative;
 }
 
-/* FIND YOUR STYLE overlay box */
+
 .hero-box {
   grid-column: 1 / -1;
   position: absolute;
@@ -127,7 +127,7 @@ header nav button:hover {
   font-family: 'Arial Black', Arial, sans-serif;
 }
 
-/* Cards */
+
 .cards {
   grid-column: 2 / 8;
   display: flex;
@@ -176,7 +176,7 @@ header nav button:hover {
   background-color: #7d1520;
 }
 
-/* Footer */
+
 footer {
   grid-column: 1 / -1;
   background-color: #d6b1b8;
