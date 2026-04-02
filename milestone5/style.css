@@ -18,7 +18,7 @@ body {
   padding: 20px 0;
 }
 
-/* Header */
+
 header {
   grid-column: 1 / -1;
   display: grid;
@@ -48,9 +48,9 @@ header nav button {
   color: white;
   border: none;
   border-radius: 15px;
-  padding: 8px 25px;
+  padding: 12px 35px;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.3rem;
   cursor: pointer;
   white-space: nowrap;
   letter-spacing: 0.03em;
@@ -67,12 +67,12 @@ header nav button:hover {
 }
 
 .logo img {
-  height: 60px;
+  height: 100px;
   width: auto;
   object-fit: contain;
 }
 
-/* FIT CHECKER Title */
+
 .title {
   grid-column: 1 / -1;
   text-align: center;
@@ -85,7 +85,7 @@ header nav button:hover {
   text-transform: uppercase;
 }
 
-/* Hero */
+
 #hero {
   grid-column: 1 / -1;
   display: grid;
@@ -106,7 +106,7 @@ header nav button:hover {
   position: relative;
 }
 
-/* FIND YOUR STYLE overlay box */
+
 .hero-box {
   grid-column: 1 / -1;
   position: absolute;
@@ -114,9 +114,9 @@ header nav button:hover {
   left: 50%;
   transform: translateX(-50%);
   background-color: white;
-  padding: 20px 60px;
+  padding: 15px 40px;
   border-radius: 12px;
-  font-size: 3rem;
+  font-size: 2rem; 
   font-weight: 900;
   color: #6a0f18;
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
@@ -127,7 +127,7 @@ header nav button:hover {
   font-family: 'Arial Black', Arial, sans-serif;
 }
 
-/* Cards */
+
 .cards {
   grid-column: 2 / 8;
   display: flex;
@@ -176,7 +176,7 @@ header nav button:hover {
   background-color: #7d1520;
 }
 
-/* Footer */
+
 footer {
   grid-column: 1 / -1;
   background-color: #d6b1b8;
