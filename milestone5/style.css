@@ -526,23 +526,23 @@ footer {
   }
 
   /* HERO-BOX SMALL OVERLAY */
-  .hero-box {
-    position: absolute;
-    top: 50%;
+.hero-box {
+    position: absolute;           /* overlay on first image */
+    top: 50%;                     /* vertically center */
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: 80%;
-    max-width: 200px;
+    width: 90%;                   /* wide horizontal box */
+    max-width: 300px;             /* optional max width */
     text-align: center;
-    font-size: .8rem;
-    padding: 6px 10px;
-    background-color: rgba(255,255,255,0.85);
+    font-size: 0.75rem;           /* smaller text to fit inside */
+    padding: 5px 10px;            /* short height, more horizontal */
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 12px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-    line-height: 1.1;
-    word-wrap: break-word;
-  }
+    line-height: 1;               /* tight line spacing */
+    word-wrap: break-word;        /* wrap text inside box */
+}
 
   /* CARDS STACK */
   .cards {
