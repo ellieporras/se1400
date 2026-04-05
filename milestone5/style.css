@@ -232,35 +232,40 @@ footer {
   }
 }
 
-/* ========================= */
-/* ✅ 768px (PHONE) */
-/* ========================= */
+
 @media (max-width: 768px) {
 
-  /* Wrapper becomes 100% width */
+  /* ========================= */
+  /* WRAPPER */
+  /* ========================= */
   #wrapper {
-    grid-template-columns: 1fr;
-    padding: 10px;
+    display: block;        /* remove grid layout */
+    max-width: 100%;       /* fill screen */
+    padding: 0 10px;       /* small padding from screen edge */
   }
 
-  /* Hide logo on small screens */
+  /* ========================= */
+  /* HEADER */
+  /* ========================= */
   .logo {
-    display: none;
+    display: none;         /* hide logo */
   }
 
-  /* Header stacks vertically */
   header {
-    grid-template-columns: 1fr;
-    text-align: center;
+    display: flex;
+    flex-direction: column; /* stack all header content vertically */
+    align-items: center;
     gap: 10px;
+    text-align: center;
   }
 
-  /* Nav buttons stack vertically and center */
   .nav-left,
   .nav-right {
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
+    gap: 8px;
   }
 
   header nav button {
@@ -270,16 +275,29 @@ footer {
     padding: 8px;
   }
 
-  /* Title adjusts font size */
+  /* ========================= */
+  /* TITLE */
+  /* ========================= */
   .title h2 {
     font-size: 1.8rem;
+    margin: 10px 0;
   }
 
-  /* HERO: images stack and fit width */
+  /* ========================= */
+  /* HERO SECTION */
+  /* ========================= */
   #hero {
-    grid-template-columns: 1fr;
+    display: grid;                  /* keep grid for overlay positioning */
+    grid-template-columns: 1fr;     /* single column for images */
+    position: relative;             /* needed for hero-box overlay */
     margin-top: 0;
-    padding: 0 10px; /* small padding so images don’t touch edges */
+    padding: 0;
+  }
+
+  .left-hero,
+  .right-hero {
+    width: 100%;
+    margin: 0 0 10px 0; /* spacing between images */
   }
 
   .left-hero img,
@@ -288,20 +306,32 @@ footer {
     height: auto;
     object-fit: cover;
     border-radius: 6px;
+    display: block;
   }
 
-  /* Hero-box: moves above images and centers */
+  /* ========================= */
+  /* HERO-BOX OVERLAY */
+  /* ========================= */
   .hero-box {
-    position: static;
-    transform: none;
-    margin: 10px auto;
+    position: absolute;             /* overlay on top of first hero image */
+    top: 50%;                       /* vertically center over first image */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 90%;                      /* stay within screen */
     text-align: center;
     font-size: 1.5rem;
     padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.85); /* semi-transparent overlay */
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
   }
 
-  /* CARDS: stack vertically and center */
+  /* ========================= */
+  /* CARDS */
+  /* ========================= */
   .cards {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
@@ -310,23 +340,26 @@ footer {
 
   .card {
     width: 100%;
-    max-width: 400px; /* optional: limit card width */
-    flex: unset; /* disables flex grow/shrink */
+    max-width: 400px;  /* optional limit */
+    flex: unset;        /* disable flex grow/shrink */
   }
 
-  /* FOOTER: stack vertically */
+  /* ========================= */
+  /* FOOTER */
+  /* ========================= */
   footer {
+    display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
     padding: 15px;
   }
 
-  /* Social icons smaller */
   .social-icons img {
     width: 26px;
     height: 26px;
   }
+
 }
 
 
