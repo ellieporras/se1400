@@ -181,6 +181,25 @@ footer {
   height: 34px;
 }
 
+.card-style {
+  background: white;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}  
+
+header,
+.title,
+#hero,
+.cards,
+.content,
+footer {
+  grid-column: 2 / 8;
+}
+
+
+
 /* ========================= */
 /* ✅ 992px */
 /* ========================= */
