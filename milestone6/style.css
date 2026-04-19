@@ -1,3 +1,7 @@
+/* ========================= */
+/* GLOBAL */
+/* ========================= */
+
 * {
   box-sizing: border-box;
 }
@@ -18,6 +22,9 @@ body {
   padding: 20px 0;
 }
 
+/* ========================= */
+/* HEADER */
+/* ========================= */
 
 header {
   grid-column: 1 / -1;
@@ -25,7 +32,6 @@ header {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   padding: 0 15px;
-  background-color: #d6b1b8;
   position: relative;
 }
 
@@ -35,30 +41,25 @@ header {
   gap: 15px;
 }
 
-.nav-left {
-  justify-content: flex-start;
-}
+.nav-left { justify-content: flex-start; }
+.nav-right { justify-content: flex-end; }
 
-.nav-right {
-  justify-content: flex-end;
-}
-
-header nav button {
+header nav a {
   background-color: #6a0f18;
   color: white;
-  border: none;
   border-radius: 15px;
   padding: 12px 35px;
   font-weight: 700;
   font-size: 1.3rem;
-  cursor: pointer;
   white-space: nowrap;
   letter-spacing: 0.03em;
   font-family: 'Arial Black', Arial, sans-serif;
   transition: background-color 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
 }
 
-header nav button:hover {
+header nav a:hover {
   background-color: #7d1520;
 }
 
@@ -68,91 +69,74 @@ header nav button:hover {
 
 .logo img {
   height: 100px;
-  width: auto;
-  object-fit: contain;
 }
 
+/* ========================= */
+/* TITLE */
+/* ========================= */
 
 .title {
   grid-column: 1 / -1;
   text-align: center;
-  margin: 0 0 20px;
-  color: #6a0f18;
-  font-family: 'Arial Black', Arial, sans-serif;
-  font-weight: 900;
   font-size: 2.6rem;
-  letter-spacing: 0.1em;
+  font-weight: 900;
   text-transform: uppercase;
 }
 
+/* ========================= */
+/* HERO */
+/* ========================= */
 
 #hero {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 10px;
-  margin-top: -80px; /* pull hero images upward behind header background */
+  margin-top: -80px;
   position: relative;
 }
 
 .left-hero img,
 .right-hero img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
   border-radius: 6px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
   display: block;
-  position: relative;
 }
 
-
 .hero-box {
-  grid-column: 1 / -1;
   position: absolute;
   bottom: -45px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: white;
+  background: white;
   padding: 15px 40px;
   border-radius: 12px;
-  font-size: 2rem; 
+  font-size: 2rem;
   font-weight: 900;
-  color: #6a0f18;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-  white-space: nowrap;
-  user-select: none;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-family: 'Arial Black', Arial, sans-serif;
 }
 
+/* ========================= */
+/* CARDS */
+/* ========================= */
 
 .cards {
   grid-column: 2 / 8;
   display: flex;
   gap: 22px;
   margin-top: 80px;
-  margin-bottom: 40px;
 }
 
 .card {
   background: white;
   flex: 1;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
 
 .card img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 12px 12px 0 0;
-  box-shadow: inset 0 0 5px rgba(0,0,0,0.05);
 }
 
 .card button {
@@ -161,34 +145,24 @@ header nav button:hover {
   border: none;
   border-radius: 15px;
   padding: 10px 30px;
-  font-weight: 700;
-  font-size: 1.15rem;
   margin: 15px 0 20px;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  white-space: nowrap;
-  letter-spacing: 0.05em;
-  font-family: 'Arial Black', Arial, sans-serif;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
 .card button:hover {
   background-color: #7d1520;
 }
 
+/* ========================= */
+/* FOOTER */
+/* ========================= */
 
 footer {
   grid-column: 1 / -1;
-  background-color: #d6b1b8;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 15px 20px 40px;
-  color: #6a0f18;
-  font-family: 'Arial Black', Arial, sans-serif;
-  font-weight: 700;
-  font-size: 1.15rem;
-  user-select: text;
 }
 
 .social-icons {
@@ -199,13 +173,6 @@ footer {
 .social-icons img {
   width: 34px;
   height: 34px;
-  cursor: pointer;
-  filter: invert(30%) sepia(80%) saturate(500%) hue-rotate(-10deg) brightness(90%) contrast(80%);
-  transition: filter 0.3s ease;
-}
-
-.social-icons img:hover {
-  filter: invert(50%) sepia(90%) saturate(900%) hue-rotate(-15deg) brightness(110%) contrast(100%);
 }
 
 /* ========================= */
