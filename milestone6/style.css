@@ -63,6 +63,12 @@ header nav a:hover {
   background-color: #7d1520;
 }
 
+header nav a {
+  min-width: 180px;
+  text-align: center;
+  display: inline-block;
+}
+
 .logo {
   justify-self: center;
 }
