@@ -1,0 +1,163 @@
+/* Structual Elements Go Here */
+* {
+    box-sizing: border-box;    /*makes thingy on side not go past padding */
+}
+body {
+    background-color:#edeeef;
+    color:#555;
+    margin:0;
+    font-family:'Lato', arial, sans-serif;
+}
+#wrapper {
+    display:grid;
+    grid-template-columns: minmax(0,1fr) repeat(6, minmax(0,175px)) minmax(0,1fr);
+}
+
+nav {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    background-color:#edeeef;
+    float: left;
+    
+    
+}
+main {
+    grid-column: 3 /-2;
+    grid-row: 1 / 2;
+    background-color:#fff;
+    padding:20px;
+}
+footer {
+    grid-column: 3 / -2;
+    background-color:#2d5ba6;
+    color:#fff;
+    font: size 0.5rem;
+    padding:20px;
+    text-align: center;
+}
+
+/* Navigation Elements Go Here */
+nav ul {
+    display:flex;
+    flex-direction: column;
+    margin:0;
+    padding:0;
+    padding-top:20px;
+    list-style-type: none;
+    
+}
+nav ul li {
+    width:100%;
+}
+nav ul li a {
+    width:100%;
+    text-decoration: none;
+    color:#555;
+    display:block;
+    padding:10px;
+}
+nav ul li a:active, nav ul li a:hover {
+    background-color:#fff;
+    color:#d35631;
+}
+
+
+/* Styling Elements Go Here */
+p {
+    line-height: 1.25rem;
+}
+a {
+    color:#d35631;
+}
+h2 {
+    border-bottom:2px solid #555; /*border need a place, size, and style*/
+}
+
+
+
+.side { 
+    width:300px;
+    padding-top:10px;
+    padding-left:10px;
+    padding-bottom: 0px;
+    padding-right: 0px;
+    font-style: italic;
+    font-size:.75rem;
+    float:right;     /*this is the div class we gave to the small image and text to move to the right */
+} /*put a clear in html after this div to clear the float so the next section will be below the floated image and text*/
+
+
+.logo {
+    width:90%;
+    padding-top:20px; /*disregard the padding top, just to make it look better*/
+    max-width:200px;
+}
+.responsive {
+    width:100%;  /*this is how your make your image resposive and then apply to all images u want responsive*/
+}
+video {
+    height: 320px;
+    width: 100%;
+    float:none;
+    object-fit: cover;
+}
+.clear {
+    clear:both;
+}
+
+/* Media Query of 960 and less goes here */
+@media screen and (max-width: 960px) {
+    nav ul {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .side, video {
+        width:100%;
+        padding:0px;
+        float:none;
+    }
+    nav {
+        grid-column: 2 / -2;
+        text-align: center;
+    }
+    main {
+        grid-column: 2 / -2;
+        grid-row:2 / 3;
+    }
+
+    footer {
+        grid-column: 2 / -2;
+    }
+    
+    
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
